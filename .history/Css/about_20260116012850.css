@@ -14,32 +14,26 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
-  max-width: 1300px;
+  margin: 3rem auto;
+  max-width: 1200px;
   padding: 0 2rem;
 }
 
-/* ========== HEADER - EXACT MATCH TO CONTACT "GET IN TOUCH" ========== */
+/* ========== HEADER "A BIT ABOUT ME..." - EXACTLY LIKE CONTACT ========== */
 .about-me {
   width: 100%;
   background: linear-gradient(135deg, rgba(9, 69, 128, 0.3), rgba(0, 10, 30, 0.3));
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 40px;
-  padding: 5rem 3rem;
+  border-radius: 30px;
+  padding: 4rem 2rem;
   text-align: center;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 0.8s ease;
   position: relative;
   overflow: hidden;
   margin-bottom: 3rem;
   z-index: 1;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
 }
 
 /* STARS BACKGROUND - EXACTLY LIKE CONTACT */
@@ -65,10 +59,10 @@ body {
   to { background-position: 1000px 1000px; }
 }
 
-/* TEXT STYLING - LARGE LIKE CONTACT */
+/* TEXT STYLING */
 .text {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
   background: linear-gradient(135deg, #00E7FF, #0099FF, #00E7FF);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -78,19 +72,7 @@ body {
   position: relative;
   z-index: 10;
   margin: 0;
-  letter-spacing: -2px;
-  line-height: 1.1;
-}
-
-/* SUBTITLE - LIKE CONTACT PAGE */
-.subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
-  position: relative;
-  z-index: 10;
-  margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: -1px;
 }
 
 @keyframes gradient {
@@ -109,7 +91,7 @@ body {
   }
 }
 
-/* ========== VIDEO - PROFESSIONAL ========== */
+/* ========== VIDEO CONTAINER - PROFESSIONAL & SEPARATED ========== */
 .vidio {
   width: 100%;
   max-width: 500px;
@@ -313,17 +295,12 @@ body {
   }
   
   .about-me {
-    padding: 4rem 2rem;
+    padding: 3rem 1.5rem;
     margin-bottom: 2.5rem;
-    min-height: 250px;
   }
   
   .text {
-    font-size: 4rem;
-  }
-
-  .subtitle {
-    font-size: 1.3rem;
+    font-size: 3rem;
   }
   
   .vidio {
@@ -350,19 +327,13 @@ body {
   }
   
   .about-me {
-    padding: 3rem 1.5rem;
-    border-radius: 25px;
+    padding: 2.5rem 1.2rem;
+    border-radius: 20px;
     margin-bottom: 2rem;
-    min-height: 200px;
   }
   
   .text {
-    font-size: 3rem;
-    letter-spacing: -1px;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
+    font-size: 2.2rem;
   }
   
   .vidio {
@@ -396,18 +367,13 @@ body {
   }
   
   .about-me {
-    padding: 2.5rem 1.2rem;
-    border-radius: 20px;
+    padding: 2rem 1rem;
+    border-radius: 15px;
     margin-bottom: 1.5rem;
-    min-height: 180px;
   }
   
   .text {
-    font-size: 2.2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
+    font-size: 1.7rem;
   }
   
   .vidio {
@@ -435,11 +401,7 @@ body {
 /* Extra Small Screens */
 @media (max-width: 360px) {
   .text {
-    font-size: 1.8rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   
   .info {

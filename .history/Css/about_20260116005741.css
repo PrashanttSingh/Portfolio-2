@@ -1,0 +1,305 @@
+/* ========== ABOUT PAGE - PROFESSIONAL DESIGN ========== */
+
+/* Background & Glow Effects (if not in main CSS) */
+body {
+  background: radial-gradient(circle at center, #094580, #000);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* About Section Container */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+/* "A bit about me..." Section */
+.about-me {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(9, 69, 128, 0.3), rgba(0, 10, 30, 0.3));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 0.8s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.about-me::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 231, 255, 0.05), transparent);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.text {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #00E7FF, #0099FF, #00E7FF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 3s ease infinite;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Video Section */
+.vidio {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 15px 50px rgba(0, 231, 255, 0.3);
+  border: 2px solid rgba(0, 231, 255, 0.2);
+  margin: 2rem auto;
+  display: block;
+  animation: fadeIn 1s ease;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.9; }
+}
+
+/* Story/Info Section */
+.myself {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem 5rem;
+}
+
+.info {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Individual Paragraphs */
+.para-1,
+.para-2,
+.para3 {
+  background: linear-gradient(135deg, rgba(9, 69, 128, 0.2), rgba(0, 10, 30, 0.2));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.8s ease backwards;
+}
+
+.para-1 { animation-delay: 0.2s; }
+.para-2 { animation-delay: 0.4s; }
+.para3 { animation-delay: 0.6s; }
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.para-1:hover,
+.para-2:hover,
+.para3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 231, 255, 0.2);
+  border-color: rgba(0, 231, 255, 0.2);
+}
+
+/* Left Border Accent */
+.para-1::before,
+.para-2::before,
+.para3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(180deg, #00E7FF, #ff3366);
+  border-radius: 20px 0 0 20px;
+  transition: width 0.3s ease;
+}
+
+.para-1:hover::before,
+.para-2:hover::before,
+.para3:hover::before {
+  width: 8px;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .about {
+    padding: 0 1.5rem;
+    margin: 2rem auto;
+  }
+  
+  .about-me {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .text {
+    font-size: 2.5rem;
+  }
+  
+  .vidio {
+    max-width: 500px;
+  }
+  
+  .myself {
+    padding: 0 1.5rem 4rem;
+  }
+  
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+  
+  .about-me {
+    padding: 2rem 1.2rem;
+    border-radius: 20px;
+  }
+  
+  .text {
+    font-size: 2rem;
+  }
+  
+  .vidio {
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 1.5rem auto;
+  }
+  
+  .myself {
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+  }
+  
+  .info {
+    font-size: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about {
+    margin: 1rem auto;
+  }
+  
+  .about-me {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+  }
+  
+  .vidio {
+    border-radius: 15px;
+    margin: 1rem auto;
+  }
+  
+  .myself {
+    padding: 0 0.8rem 2rem;
+  }
+  
+  .info {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    gap: 1.2rem;
+  }
+  
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.2rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 360px) {
+  .text {
+    font-size: 1.3rem;
+  }
+  
+  .info {
+    font-size: 0.9rem;
+  }
+  
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1rem;
+  }
+}

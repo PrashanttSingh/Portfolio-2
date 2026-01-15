@@ -14,83 +14,67 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem auto;
-  max-width: 1300px;
+  margin: 3rem auto;
+  max-width: 1200px;
   padding: 0 2rem;
 }
 
-/* ========== HEADER - EXACT MATCH TO CONTACT "GET IN TOUCH" ========== */
+/* ========== "A BIT ABOUT ME..." WITH STARS (EXACTLY LIKE CONTACT) ========== */
 .about-me {
   width: 100%;
   background: linear-gradient(135deg, rgba(9, 69, 128, 0.3), rgba(0, 10, 30, 0.3));
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 40px;
-  padding: 5rem 3rem;
+  border-radius: 30px;
+  padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   animation: fadeInUp 0.8s ease;
   position: relative;
   overflow: hidden;
-  margin-bottom: 3rem;
-  z-index: 1;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* STARS BACKGROUND - EXACTLY LIKE CONTACT */
+/* STARS BACKGROUND - EXACTLY LIKE CONTACT PAGE */
 .about-me::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  background: url("https://i.ibb.co/2d1Pd3n/stars-texture.gif");
+  background-image: url("https://i.ibb.co/2d1Pd3n/stars-texture.gif");
   background-size: cover;
   background-repeat: repeat;
   background-position: 0 0;
   opacity: 0.2;
   z-index: 0;
-  pointer-events: none;
   animation: starMove 25s linear infinite;
 }
 
 @keyframes starMove {
-  from { background-position: 0 0; }
-  to { background-position: 1000px 1000px; }
+  0% { 
+    background-position: 0 0; 
+  }
+  100% { 
+    background-position: 1000px 1000px; 
+  }
 }
 
-/* TEXT STYLING - LARGE LIKE CONTACT */
 .text {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
   background: linear-gradient(135deg, #00E7FF, #0099FF, #00E7FF);
   background-size: 200% 200%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   animation: gradient 3s ease infinite;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   margin: 0;
-  letter-spacing: -2px;
-  line-height: 1.1;
-}
-
-/* SUBTITLE - LIKE CONTACT PAGE */
-.subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 400;
-  position: relative;
-  z-index: 10;
-  margin: 0;
-  letter-spacing: 0.5px;
 }
 
 @keyframes gradient {
@@ -109,45 +93,43 @@ body {
   }
 }
 
-/* ========== VIDEO - PROFESSIONAL ========== */
+/* ========== VIDEO SECTION - PROFESSIONAL & ELEGANT ========== */
 .vidio {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   height: auto;
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(0, 231, 255, 0.15);
-  border: 3px solid rgba(0, 231, 255, 0.2);
-  margin: 0 auto 3rem;
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 231, 255, 0.1);
+  border: 2px solid rgba(0, 231, 255, 0.15);
+  margin: 2rem auto;
   display: block;
   animation: videoFadeIn 1.2s ease;
-  background: rgba(0, 10, 30, 0.4);
-  transition: all 0.5s ease;
-  opacity: 0.85;
-  filter: brightness(0.8) contrast(1.1) saturate(0.95);
+  mix-blend-mode: normal;
+  opacity: 1;
+  filter: brightness(0.88) contrast(1.08) saturate(1.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  z-index: 0;
 }
 
 .vidio:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-8px) scale(1.01);
   box-shadow: 
-    0 30px 80px rgba(0, 231, 255, 0.25),
-    0 0 0 1px rgba(0, 231, 255, 0.4);
-  border-color: rgba(0, 231, 255, 0.5);
-  opacity: 0.95;
-  filter: brightness(0.85) contrast(1.12) saturate(1);
+    0 20px 60px rgba(0, 231, 255, 0.25),
+    0 0 0 1px rgba(0, 231, 255, 0.3);
+  border-color: rgba(0, 231, 255, 0.35);
+  filter: brightness(0.92) contrast(1.1) saturate(1.1);
 }
 
 @keyframes videoFadeIn {
-  from { 
+  0% { 
     opacity: 0;
-    transform: translateY(20px);
+    transform: scale(0.95);
   }
-  to { 
-    opacity: 0.85;
-    transform: translateY(0);
+  100% { 
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -228,7 +210,7 @@ body {
   width: 8px;
 }
 
-/* ========== RESPONSIVE STACKED MENU ========== */
+/* ========== RESPONSIVE STACKED MENU (SAME AS OTHER PAGES) ========== */
 @media (max-width: 768px) {
   .menu {
     flex-direction: column !important;
@@ -282,10 +264,16 @@ body {
   .menu {
     margin-top: 15px !important;
     width: 95% !important;
+    gap: 10px;
   }
 
   .name {
     font-size: 30px !important;
+    margin-bottom: 5px;
+  }
+
+  .container {
+    gap: 8px;
   }
 
   .nav-btn {
@@ -313,22 +301,15 @@ body {
   }
   
   .about-me {
-    padding: 4rem 2rem;
-    margin-bottom: 2.5rem;
-    min-height: 250px;
+    padding: 2.5rem 1.5rem;
   }
   
   .text {
-    font-size: 4rem;
-  }
-
-  .subtitle {
-    font-size: 1.3rem;
+    font-size: 2.5rem;
   }
   
   .vidio {
-    max-width: 450px;
-    margin-bottom: 2.5rem;
+    max-width: 480px;
   }
   
   .myself {
@@ -350,25 +331,18 @@ body {
   }
   
   .about-me {
-    padding: 3rem 1.5rem;
-    border-radius: 25px;
-    margin-bottom: 2rem;
-    min-height: 200px;
+    padding: 2rem 1.2rem;
+    border-radius: 20px;
   }
   
   .text {
-    font-size: 3rem;
-    letter-spacing: -1px;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
   
   .vidio {
     max-width: 100%;
-    border-radius: 20px;
-    margin-bottom: 2rem;
+    border-radius: 18px;
+    margin: 1.5rem auto;
   }
   
   .myself {
@@ -396,23 +370,17 @@ body {
   }
   
   .about-me {
-    padding: 2.5rem 1.2rem;
-    border-radius: 20px;
-    margin-bottom: 1.5rem;
-    min-height: 180px;
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
   }
   
   .text {
-    font-size: 2.2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   
   .vidio {
     border-radius: 15px;
-    margin-bottom: 1.5rem;
+    margin: 1rem auto;
   }
   
   .myself {
@@ -435,11 +403,7 @@ body {
 /* Extra Small Screens */
 @media (max-width: 360px) {
   .text {
-    font-size: 1.8rem;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
   
   .info {
@@ -452,3 +416,4 @@ body {
     padding: 1rem;
   }
 }
+
