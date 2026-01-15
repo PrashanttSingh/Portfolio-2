@@ -1,0 +1,36 @@
+.menu {
+  color: white;
+  display: flex;
+  background-color: red;
+  border-radius: 50px;
+  padding:0px;
+  margin-top:30px;
+  justify-content: space-evenly;
+}
+
+.message{
+  width: 75%;
+  height: 250px;
+  font-size: 58px;
+  font-weight: 600;
+  color: white;
+  padding-left:10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(9, 69, 128, 0.3);
+  
+}
+.contact{
+ display:flex;
+ justify-content: space-evenly;
+  margin-top: 20px;
+   
+    }
+.video {
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  height: 260px;
+  padding-bottom: 20px;
+}    

@@ -1,0 +1,23 @@
+.menu {
+  color: white;
+  display: flex;
+  background-color: rgba(255, 0, 0, 0.83);
+  border-radius: 50px;
+  padding:0px;
+  margin-top:30px;
+  justify-content: space-evenly;
+}
+.about{
+  display: flex;
+  flex-direction: row;
+}
+.about-me {
+  width: 70;
+  
+}
+.text{
+  
+}
+.vidio{
+  mix-blend-mode: lighten;
+}

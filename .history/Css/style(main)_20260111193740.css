@@ -1,0 +1,414 @@
+/* ========== RESPONSIVE PORTFOLIO CSS - OPTIMIZED ========== */
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BASE STYLES (All screens) ========== */
+body {
+  background: radial-gradient(circle at center, #094580, #000);
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.glow {
+  width: 300px;
+  height: 300px;
+  background: #13ade1;
+  filter: blur(150px);
+  animation: moveGlow 10s infinite alternate;
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes moveGlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(200px, 100px); }
+}
+
+/* ========== NAVBAR ========== */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 0, 0, 0.83);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  margin: 2% auto;
+  max-width: 95%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.name {
+  color: white;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-shadow: 2px 2px 4px #000000;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.tags {
+  text-decoration: none;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 0, 0, 0.65);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  background-color: #ff3366;
+  color: #000;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.nav-btn h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: inherit;
+  margin: 0;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 95%;
+  flex-wrap: wrap;
+}
+
+.intro {
+  color: white;
+  background: rgba(9, 69, 128, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+.hello {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.prashant {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: bold;
+  color: #00E7FF;
+  text-shadow: 0 0 10px rgba(0,231,255,0.6);
+}
+
+video {
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  max-height: 260px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* ========== BOTTOM SECTION ========== */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem auto 4rem;
+  max-width: 95%;
+  flex-wrap: wrap;
+}
+
+.curious {
+  color: white;
+  background: rgba(9, 69, 128, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  flex: 1 1 30%;
+  min-width: 280px;
+}
+
+.heading {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-btn,
+.contact-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 200px;
+  margin: 0.5rem auto;
+}
+
+.project-btn {
+  background-color: rgba(255, 0, 0, 0.83);
+  color: whitesmoke;
+}
+
+.project-btn:hover {
+  background-color: rgba(0,231,255,0.4);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.contact-btn {
+  background-color: rgba(9, 69, 128, 0.5);
+  color: red;
+}
+
+.contact-btn:hover {
+  background-color: rgba(0,231,255,0.4);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.quote {
+  background: rgba(9, 69, 128, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex: 1 1 60%;
+  min-width: 280px;
+}
+
+.space-text {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  background: url("https://i.ibb.co/2d1Pd3n/stars-texture.gif"),
+              radial-gradient(circle at center, #0a4d8c, #021d34, #000);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: moveSpace 18s linear infinite;
+  line-height: 1.4;
+}
+
+@keyframes moveSpace {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .menu {
+    padding: 0.8rem 1rem;
+    margin-top: 3%;
+  }
+  
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .intro {
+    flex: 1 1 100%;
+    max-width: 600px;
+  }
+  
+  .bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .curious,
+  .quote {
+    flex: 1 1 100%;
+    max-width: 600px;
+  }
+}
+
+/* Mobile landscape and small tablets (481px - 768px) */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .name {
+    margin-bottom: 0.5rem;
+  }
+  
+  .container {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .intro {
+    padding: 1.5rem 1rem;
+  }
+  
+  video {
+    max-height: 200px;
+  }
+  
+  .curious {
+    padding: 1.5rem 1rem;
+  }
+  
+  .project-btn,
+  .contact-btn {
+    max-width: 80%;
+  }
+}
+
+/* Mobile portrait (320px - 480px) */
+@media (max-width: 480px) {
+  .menu {
+    border-radius: 25px;
+    padding: 0.8rem;
+    margin-top: 5%;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    gap: 0.3rem;
+  }
+  
+  .nav-btn {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  
+  .nav-btn h2 {
+    font-size: 0.7rem;
+  }
+  
+  .nav-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .intro {
+    width: 100%;
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .hello {
+    font-size: 1.8rem;
+  }
+  
+  .prashant {
+    font-size: 2.8rem;
+  }
+  
+  video {
+    max-height: 180px;
+    margin-top: 0.5rem;
+  }
+  
+  .hero {
+    margin: 1rem auto;
+  }
+  
+  .curious {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+  
+  .heading {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+  }
+  
+  .project-btn,
+  .contact-btn {
+    width: 90%;
+    max-width: none;
+    font-size: 1.1rem;
+  }
+  
+  .quote {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+  
+  .space-text {
+    font-size: 1.4rem;
+  }
+  
+  .bottom-section {
+    margin: 1rem auto 3rem;
+  }
+}
