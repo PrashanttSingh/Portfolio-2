@@ -1,0 +1,460 @@
+/* ========== ABOUT PAGE - PROFESSIONAL DESIGN ========== */
+
+/* Background & Glow Effects */
+body {
+  background: radial-gradient(circle at center, #094580, #000);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* About Section Container */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1300px;
+  padding: 0 2rem;
+}
+
+/* ========== HEADER - EXACT MATCH TO CONTACT "GET IN TOUCH" ========== */
+.about-me {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(9, 69, 128, 0.3), rgba(0, 10, 30, 0.3));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 5rem 3rem;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem; /* CHANGED: slightly closer to video like Contact */
+  z-index: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem; /* CHANGED: better spacing */
+}
+
+/* STARS BACKGROUND - EXACTLY LIKE CONTACT */
+.about-me::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/2d1Pd3n/stars-texture.gif");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 0;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+  animation: starMove 25s linear infinite;
+}
+
+@keyframes starMove {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+/* TEXT STYLING - LARGE LIKE CONTACT */
+.text {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #00E7FF, #0099FF, #00E7FF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 3s ease infinite;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+/* SUBTITLE - LIKE CONTACT PAGE */
+.subtitle {
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: none; /* keep natural look like Contact */
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== VIDEO - HORIZONTALLY STRETCHED (LIMITED TO SECTION) ========== */
+.vidio {
+  width: 95%;              /* CHANGED */
+  max-width: 1100px;       /* CHANGED */
+  height: auto;
+  aspect-ratio: 16 / 9;    /* CHANGED [web:52] */
+  object-fit: cover;       /* CHANGED [web:52] */
+
+  border-radius: 25px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(0, 231, 255, 0.15);
+  border: 3px solid rgba(0, 231, 255, 0.2);
+
+  margin: 0 auto 3rem;
+  display: block;
+  animation: videoFadeIn 1.2s ease;
+  background: rgba(0, 10, 30, 0.4);
+  transition: all 0.5s ease;
+  opacity: 0.88;
+  filter: brightness(0.85) contrast(1.08) saturate(1);
+  position: relative;
+  z-index: 0;
+}
+
+.vidio:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 30px 80px rgba(0, 231, 255, 0.25),
+    0 0 0 1px rgba(0, 231, 255, 0.4);
+  border-color: rgba(0, 231, 255, 0.5);
+  opacity: 0.95;
+  filter: brightness(0.9) contrast(1.12) saturate(1.05);
+}
+
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.88;
+    transform: translateY(0);
+  }
+}
+
+/* Story/Info Section */
+.myself {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem 5rem;
+}
+
+.info {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Individual Paragraphs */
+.para-1,
+.para-2,
+.para3 {
+  background: linear-gradient(135deg, rgba(9, 69, 128, 0.2), rgba(0, 10, 30, 0.2));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.8s ease backwards;
+}
+
+.para-1 { animation-delay: 0.2s; }
+.para-2 { animation-delay: 0.4s; }
+.para3 { animation-delay: 0.6s; }
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.para-1:hover,
+.para-2:hover,
+.para3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 231, 255, 0.2);
+  border-color: rgba(0, 231, 255, 0.2);
+}
+
+/* Left Border Accent */
+.para-1::before,
+.para-2::before,
+.para3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(180deg, #00E7FF, #ff3366);
+  border-radius: 20px 0 0 20px;
+  transition: width 0.3s ease;
+}
+
+.para-1:hover::before,
+.para-2:hover::before,
+.para3:hover::before {
+  width: 8px;
+}
+
+/* ========== RESPONSIVE STACKED MENU ========== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column !important;
+    padding: 15px !important;
+    border-radius: 25px !important;
+    align-items: center !important;
+    gap: 12px;
+    width: 92% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .name {
+    font-size: 35px !important;
+    margin-bottom: 8px;
+  }
+
+  .container {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 8px;
+  }
+
+  .tags {
+    width: 100%;
+    padding-bottom: 0 !important;
+    height: auto !important;
+  }
+
+  .nav-btn {
+    width: 100% !important;
+    height: auto !important;
+    padding: 14px 20px !important;
+    justify-content: center !important;
+    display: flex !important;
+    gap: 10px;
+    font-size: 15px !important;
+  }
+
+  .nav-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .nav-btn span {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    margin-top: 15px !important;
+    width: 95% !important;
+  }
+
+  .name {
+    font-size: 30px !important;
+  }
+
+  .nav-btn {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .nav-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .nav-btn span {
+    font-size: 14px !important;
+  }
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .about {
+    padding: 0 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .about-me {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    min-height: 250px;
+  }
+
+  .text {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .vidio {
+    max-width: 900px; /* CHANGED */
+    margin-bottom: 2.5rem;
+  }
+
+  .myself {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .about-me {
+    padding: 3rem 1.5rem;
+    border-radius: 25px;
+    margin-bottom: 1.6rem;
+    min-height: 200px;
+  }
+
+  .text {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .vidio {
+    width: 100%;       /* CHANGED */
+    max-width: 100%;   /* CHANGED */
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .myself {
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+  }
+
+  .info {
+    font-size: 1rem;
+    gap: 1.5rem;
+  }
+
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about {
+    margin: 1rem auto;
+  }
+
+  .about-me {
+    padding: 2.5rem 1.2rem;
+    border-radius: 20px;
+    margin-bottom: 1.3rem;
+    min-height: 180px;
+  }
+
+  .text {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .vidio {
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+  }
+
+  .myself {
+    padding: 0 0.8rem 2rem;
+  }
+
+  .info {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    gap: 1.2rem;
+  }
+
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.2rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 360px) {
+  .text {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .info {
+    font-size: 0.9rem;
+  }
+
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1rem;
+  }
+}

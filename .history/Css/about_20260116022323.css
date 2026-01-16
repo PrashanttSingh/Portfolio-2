@@ -8,198 +8,7 @@ body {
   min-height: 100vh;
 }
 
-/* ========== HERO SECTION (COPIED FROM CONTACT) ========== */
-.main-box {
-  display: flex;
-  justify-content: center;
-  margin: 3rem auto;
-  max-width: 95%;
-  padding: 0 1rem;
-}
-
-.about-heading {
-  flex: 1;
-  background: linear-gradient(135deg, rgba(9, 69, 128, 0.25), rgba(0, 231, 255, 0.15));
-  backdrop-filter: blur(25px);
-  border: 2px solid rgba(0, 231, 255, 0.2);
-  border-radius: 35px;
-  padding: 3.5rem 2rem;
-  text-align: center;
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(0, 231, 255, 0.2),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  animation: fadeInUp 0.8s ease, float 6s ease-in-out infinite;
-  position: relative;
-  overflow: hidden;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Shimmer Effect */
-.about-heading::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(0, 231, 255, 0.08), transparent);
-  animation: shimmer 4s infinite linear;
-}
-
-@keyframes shimmer {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Floating Particles */
-.floating-particles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: linear-gradient(135deg, #00E7FF, #0099FF);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 231, 255, 0.8);
-  animation: particleFloat 8s infinite;
-}
-
-.particle:nth-child(1) {
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-  animation-duration: 6s;
-}
-
-.particle:nth-child(2) {
-  top: 60%;
-  left: 80%;
-  animation-delay: 1.5s;
-  animation-duration: 7s;
-}
-
-.particle:nth-child(3) {
-  top: 40%;
-  left: 30%;
-  animation-delay: 3s;
-  animation-duration: 8s;
-}
-
-.particle:nth-child(4) {
-  top: 70%;
-  left: 60%;
-  animation-delay: 2s;
-  animation-duration: 9s;
-}
-
-.particle:nth-child(5) {
-  top: 30%;
-  left: 90%;
-  animation-delay: 4s;
-  animation-duration: 7s;
-}
-
-@keyframes particleFloat {
-  0%, 100% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-50px) translateX(20px);
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 1;
-  }
-}
-
-/* Heading Text */
-.heading-text {
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  font-weight: 900;
-  background: linear-gradient(135deg, #00E7FF 0%, #0099FF 50%, #00E7FF 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 0.8rem;
-  animation: gradientShift 4s ease infinite;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 0 30px rgba(0, 231, 255, 0.3);
-  letter-spacing: 2px;
-}
-
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Heading Subtitle */
-.heading-subtitle {
-  font-size: clamp(1rem, 2vw, 1.4rem);
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 300;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1.2s ease 0.3s backwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Decorative Line */
-.decorative-line {
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #00E7FF, transparent);
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  animation: lineExpand 2s ease infinite;
-}
-
-@keyframes lineExpand {
-  0%, 100% {
-    width: 100px;
-    opacity: 0.5;
-  }
-  50% {
-    width: 150px;
-    opacity: 1;
-  }
-}
-
-/* ========== VIDEO SECTION ========== */
+/* About Section Container */
 .about {
   display: flex;
   flex-direction: column;
@@ -210,9 +19,100 @@ body {
   padding: 0 2rem;
 }
 
+/* ========== HEADER - EXACT MATCH TO CONTACT "GET IN TOUCH" ========== */
+.about-me {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(9, 69, 128, 0.3), rgba(0, 10, 30, 0.3));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 5rem 3rem;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  z-index: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* STARS BACKGROUND - EXACTLY LIKE CONTACT */
+.about-me::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.ibb.co/2d1Pd3n/stars-texture.gif");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 0;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+  animation: starMove 25s linear infinite;
+}
+
+@keyframes starMove {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+/* TEXT STYLING - LARGE LIKE CONTACT */
+.text {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #00E7FF, #0099FF, #00E7FF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 3s ease infinite;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+/* SUBTITLE - LIKE CONTACT PAGE */
+.subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== VIDEO - PROFESSIONAL ========== */
 .vidio {
   width: 100%;
-  max-width: 900px;
+  max-width: 500px;
   height: auto;
   border-radius: 25px;
   box-shadow: 
@@ -251,7 +151,7 @@ body {
   }
 }
 
-/* ========== STORY SECTION ========== */
+/* Story/Info Section */
 .myself {
   max-width: 1200px;
   margin: 3rem auto;
@@ -328,41 +228,8 @@ body {
   width: 8px;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* Large Tablets */
-@media (max-width: 1024px) {
-  .main-box {
-    margin: 2.5rem auto;
-  }
-  
-  .about-heading {
-    padding: 3rem 1.8rem;
-  }
-  
-  .about {
-    padding: 0 1.5rem;
-    margin: 2rem auto;
-  }
-  
-  .vidio {
-    max-width: 750px;
-  }
-  
-  .myself {
-    padding: 0 1.5rem 4rem;
-  }
-  
-  .para-1,
-  .para-2,
-  .para3 {
-    padding: 1.8rem;
-  }
-}
-
-/* Tablets & Mobile */
+/* ========== RESPONSIVE STACKED MENU ========== */
 @media (max-width: 768px) {
-  /* Stacked Menu */
   .menu {
     flex-direction: column !important;
     padding: 15px !important;
@@ -409,57 +276,8 @@ body {
   .nav-btn span {
     font-size: 15px !important;
   }
-
-  /* Hero Section */
-  .main-box {
-    margin: 2rem auto 1.5rem;
-  }
-  
-  .about-heading {
-    padding: 2.8rem 1.8rem;
-    border-radius: 28px;
-  }
-  
-  .heading-text {
-    font-size: 2.8rem;
-  }
-  
-  .heading-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  /* Video */
-  .about {
-    padding: 0 1rem;
-    margin: 1.5rem auto;
-  }
-  
-  .vidio {
-    max-width: 100%;
-    border-radius: 20px;
-    margin-bottom: 2rem;
-  }
-  
-  /* Story */
-  .myself {
-    margin: 2rem auto;
-    padding: 0 1rem 3rem;
-  }
-  
-  .info {
-    font-size: 1rem;
-    gap: 1.5rem;
-  }
-  
-  .para-1,
-  .para-2,
-  .para3 {
-    padding: 1.5rem;
-    border-radius: 15px;
-  }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
   .menu {
     margin-top: 15px !important;
@@ -483,27 +301,113 @@ body {
   .nav-btn span {
     font-size: 14px !important;
   }
+}
 
-  .main-box {
-    margin: 1.5rem auto 1rem;
-    padding: 0 0.8rem;
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .about {
+    padding: 0 1.5rem;
+    margin: 2rem auto;
   }
   
-  .about-heading {
-    padding: 2.2rem 1.4rem;
-    border-radius: 24px;
+  .about-me {
+    padding: 4rem 2rem;
+    margin-bottom: 2.5rem;
+    min-height: 250px;
   }
   
-  .heading-text {
-    font-size: 2.2rem;
+  .text {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
   }
   
-  .heading-subtitle {
+  .vidio {
+    max-width: 450px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .myself {
+    padding: 0 1.5rem 4rem;
+  }
+  
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+  
+  .about-me {
+    padding: 3rem 1.5rem;
+    border-radius: 25px;
+    margin-bottom: 2rem;
+    min-height: 200px;
+  }
+  
+  .text {
+    font-size: 3rem;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .vidio {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .myself {
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+  }
+  
+  .info {
     font-size: 1rem;
+    gap: 1.5rem;
   }
   
+  .para-1,
+  .para-2,
+  .para3 {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
   .about {
     margin: 1rem auto;
+  }
+  
+  .about-me {
+    padding: 2.5rem 1.2rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    min-height: 180px;
+  }
+  
+  .text {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
   
   .vidio {
@@ -530,11 +434,11 @@ body {
 
 /* Extra Small Screens */
 @media (max-width: 360px) {
-  .heading-text {
-    font-size: 1.9rem;
+  .text {
+    font-size: 1.8rem;
   }
-  
-  .heading-subtitle {
+
+  .subtitle {
     font-size: 0.9rem;
   }
   
